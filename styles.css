@@ -45,8 +45,8 @@ body {
     font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.7;
-    color: var(--gray-800);
-    background: var(--white);
+    color: rgba(255, 255, 255, 0.85);
+    background: var(--primary);
     overflow-x: hidden;
 }
 
@@ -490,10 +490,10 @@ img {
 .section-tag {
     display: inline-block;
     padding: 6px 18px;
-    background: rgba(212, 168, 67, 0.1);
-    border: 1px solid rgba(212, 168, 67, 0.2);
+    background: rgba(212, 168, 67, 0.15);
+    border: 1px solid rgba(212, 168, 67, 0.3);
     border-radius: 50px;
-    color: var(--accent-dark);
+    color: var(--accent-light);
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -505,21 +505,21 @@ img {
     font-family: var(--font-heading);
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 800;
-    color: var(--primary);
+    color: var(--white);
     margin-bottom: 16px;
     line-height: 1.2;
 }
 
 .section-desc {
     font-size: 1.1rem;
-    color: var(--gray-600);
+    color: rgba(255, 255, 255, 0.6);
     max-width: 600px;
     margin: 0 auto;
 }
 
 /* ===== HAKKIMIZDA ===== */
 .hakkimizda {
-    background: var(--off-white);
+    background: var(--primary-light);
 }
 
 .about-grid {
@@ -531,13 +531,13 @@ img {
 
 .about-text p {
     margin-bottom: 20px;
-    color: var(--gray-600);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 1.05rem;
     line-height: 1.8;
 }
 
 .about-text strong {
-    color: var(--primary);
+    color: var(--accent-light);
 }
 
 .about-highlights {
@@ -552,9 +552,10 @@ img {
     align-items: center;
     gap: 16px;
     padding: 16px 20px;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     transition: var(--transition);
 }
 
@@ -580,13 +581,13 @@ img {
     font-family: var(--font-heading);
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--accent-light);
     margin-bottom: 2px;
 }
 
 .highlight-item p {
     font-size: 0.85rem;
-    color: var(--gray-600);
+    color: rgba(255, 255, 255, 0.6);
     margin: 0;
 }
 
@@ -639,8 +640,8 @@ img {
 }
 
 .feature-card {
-    background: var(--white);
-    border: 1px solid var(--gray-100);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-md);
     padding: 32px 24px;
     text-align: center;
@@ -675,13 +676,13 @@ img {
     width: 64px;
     height: 64px;
     border-radius: 16px;
-    background: linear-gradient(135deg, rgba(11, 29, 58, 0.06), rgba(11, 29, 58, 0.02));
+    background: linear-gradient(135deg, rgba(212, 168, 67, 0.15), rgba(212, 168, 67, 0.05));
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
     font-size: 1.5rem;
-    color: var(--primary);
+    color: var(--accent);
     transition: var(--transition);
 }
 
@@ -695,13 +696,13 @@ img {
     font-family: var(--font-heading);
     font-size: 1.05rem;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--white);
     margin-bottom: 10px;
 }
 
 .feature-card p {
     font-size: 0.88rem;
-    color: var(--gray-600);
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
 }
 
@@ -871,7 +872,7 @@ img {
 
 /* ===== İLETİŞİM ===== */
 .iletisim {
-    background: var(--off-white);
+    background: var(--primary-light);
 }
 
 .contact-grid {
@@ -893,9 +894,10 @@ img {
     align-items: center;
     gap: 16px;
     padding: 20px;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     transition: var(--transition);
 }
 
@@ -921,7 +923,7 @@ img {
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 0.85rem;
-    color: var(--gray-400);
+    color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 4px;
@@ -931,17 +933,17 @@ img {
 .contact-item p {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--primary);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .contact-item a:hover {
-    color: var(--accent-dark);
+    color: var(--accent-light);
 }
 
 .social-links h4 {
     font-family: var(--font-heading);
     font-weight: 700;
-    color: var(--primary);
+    color: var(--white);
     margin-bottom: 16px;
     font-size: 1.1rem;
 }
