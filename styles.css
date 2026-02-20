@@ -1,14 +1,14 @@
 /* ===== DESIGN SYSTEM ===== */
 :root {
-    --primary: #0B1D3A;
-    --primary-light: #132D5E;
-    --accent: #D4A843;
-    --accent-light: #E8C76B;
-    --accent-dark: #B8912F;
+    --primary: #0A1628;
+    --primary-light: #112240;
+    --accent: #2E86AB;
+    --accent-light: #48A9C5;
+    --accent-dark: #1B6B8A;
     --white: #FFFFFF;
-    --off-white: #F5F5F7;
-    --gray-100: #E8E8ED;
-    --gray-200: #D1D1D6;
+    --off-white: #F0F4F8;
+    --gray-100: #E2E8F0;
+    --gray-200: #CBD5E1;
     --gray-400: #8E8E93;
     --gray-600: #636366;
     --gray-800: #3A3A3C;
@@ -1130,6 +1130,130 @@ img {
     }
 }
 
+/* ===== INSTAGRAM FLOATING BTN ===== */
+.instagram-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 28px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E4405F, #C13584, #833AB4);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 20px rgba(228, 64, 95, 0.4);
+    z-index: 999;
+    transition: var(--transition);
+    animation: pulse-instagram 2s infinite;
+}
+
+.instagram-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(228, 64, 95, 0.5);
+}
+
+@keyframes pulse-instagram {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 20px rgba(228, 64, 95, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 4px 30px rgba(228, 64, 95, 0.6), 0 0 0 12px rgba(228, 64, 95, 0.1);
+    }
+}
+
+/* ===== AKSARAYIMIZ ===== */
+.aksarayimiz {
+    background: var(--primary);
+}
+
+.aksaray-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: -24px auto 48px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.aksaray-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.aksaray-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    padding: 32px 24px;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.aksaray-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.aksaray-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(46, 134, 171, 0.3);
+}
+
+.aksaray-card:hover::before {
+    transform: scaleX(1);
+}
+
+.aksaray-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(46, 134, 171, 0.15), rgba(46, 134, 171, 0.05));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+    color: var(--accent);
+    transition: var(--transition);
+}
+
+.aksaray-card:hover .aksaray-icon {
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.aksaray-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.aksaray-card p {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+}
+
 /* ===== REVEAL ANIMATION ===== */
 .reveal {
     opacity: 0;
@@ -1179,6 +1303,10 @@ img {
 
     .gallery-item.large {
         grid-column: span 1;
+    }
+
+    .aksaray-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1400,6 +1528,18 @@ img {
         bottom: 20px;
         right: 20px;
         font-size: 1.6rem;
+    }
+
+    .instagram-btn {
+        width: 54px;
+        height: 54px;
+        bottom: 84px;
+        right: 20px;
+        font-size: 1.6rem;
+    }
+
+    .aksaray-grid {
+        grid-template-columns: 1fr;
     }
 
     .gallery-placeholder i {
