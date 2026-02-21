@@ -176,13 +176,64 @@ faqQuestions.forEach(question => {
     });
 });
 
+// ===== Section View Mode =====
+const sectionViewTargets = ['galeri', 'sss', 'aksarayimiz'];
+const backBtn = document.getElementById('section-back-btn');
+
+function exitSectionView() {
+    document.body.classList.remove('section-view');
+    document.querySelectorAll('.section-view-target').forEach(s => {
+        s.classList.remove('section-view-target');
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function enterSectionView(sectionId) {
+    // Exit any previous section view
+    document.querySelectorAll('.section-view-target').forEach(s => {
+        s.classList.remove('section-view-target');
+    });
+
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        document.body.classList.add('section-view');
+        targetSection.classList.add('section-view-target');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Re-trigger reveal animations
+        targetSection.querySelectorAll('.reveal').forEach(el => {
+            el.classList.remove('active');
+            setTimeout(() => el.classList.add('active'), 100);
+        });
+    }
+}
+
+if (backBtn) {
+    backBtn.addEventListener('click', exitSectionView);
+}
+
 // ===== Smooth scroll for all anchor links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+        const href = this.getAttribute('href');
+        const sectionId = href.substring(1);
+
+        if (sectionViewTargets.includes(sectionId)) {
+            // Enter section view for galeri, sss, aksarayimiz
+            enterSectionView(sectionId);
+        } else {
+            // Exit section view if active, then scroll
+            if (document.body.classList.contains('section-view')) {
+                exitSectionView();
+                setTimeout(() => {
+                    const target = document.querySelector(href);
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            } else {
+                const target = document.querySelector(href);
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     });
 });

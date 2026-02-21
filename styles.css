@@ -164,16 +164,12 @@ img {
     z-index: 1001;
 }
 
-.logo-icon {
+.nav-logo-img {
     width: 44px;
     height: 44px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, var(--accent), var(--accent-light));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-    font-size: 1.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(212, 168, 67, 0.4);
 }
 
 .logo-text {
@@ -1453,6 +1449,54 @@ img {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* ===== SECTION VIEW MODE ===== */
+body.section-view .hero,
+body.section-view .hakkimizda,
+body.section-view .ozellikler,
+body.section-view .galeri,
+body.section-view .sss,
+body.section-view .aksarayimiz,
+body.section-view .iletisim,
+body.section-view .footer {
+    display: none;
+}
+
+body.section-view .section-view-target {
+    display: block;
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+.section-back-btn {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 24px;
+    z-index: 999;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: var(--primary);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+    transition: var(--transition);
+    align-items: center;
+    gap: 8px;
+}
+
+body.section-view .section-back-btn {
+    display: inline-flex;
+}
+
+.section-back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(212, 168, 67, 0.4);
 }
 
 /* ===== RESPONSIVE ===== */
