@@ -1456,6 +1456,17 @@ img {
     }
 }
 
+/* ===== HIDDEN SECTIONS (visible only on nav click) ===== */
+.sss,
+.aksarayimiz {
+    display: none;
+}
+
+.sss.section-view-target,
+.aksarayimiz.section-view-target {
+    display: block;
+}
+
 /* ===== SECTION VIEW MODE ===== */
 body.section-view .hero,
 body.section-view .hakkimizda,
