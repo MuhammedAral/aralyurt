@@ -49,6 +49,7 @@
                 <li><a href="#hakkimizda" class="nav-link">Hakkımızda</a></li>
                 <li><a href="#ozellikler" class="nav-link">Özellikler</a></li>
                 <li><a href="#galeri" class="nav-link">Galeri</a></li>
+                <li><a href="#sss" class="nav-link">S.S.S</a></li>
                 <li><a href="#aksarayimiz" class="nav-link">Aksarayımız</a></li>
                 <li><a href="#iletisim" class="nav-link">İletişim</a></li>
             </ul>
@@ -268,41 +269,141 @@
                 <h2 class="section-title">Yurdumuzdan Kareler</h2>
                 <p class="section-desc">Yaşam alanlarımızı ve tesislerimizi keşfedin.</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item reveal">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-bed"></i>
-                        <span>Odalar</span>
+            <div class="gallery-tabs">
+                <button class="gallery-tab-btn active" data-tab="tek-kisilik">
+                    <i class="fas fa-bed"></i> 1 Kişilik Oda
+                </button>
+                <button class="gallery-tab-btn" data-tab="iki-kisilik">
+                    <i class="fas fa-bed"></i> 2 Kişilik Oda
+                </button>
+                <button class="gallery-tab-btn" data-tab="dis-cekim">
+                    <i class="fas fa-building"></i> Dış Çekim
+                </button>
+                <button class="gallery-tab-btn" data-tab="ailemiz">
+                    <i class="fas fa-heart"></i> Ailemiz
+                </button>
+            </div>
+
+            <!-- 1 Kişilik Oda -->
+            <div class="gallery-tab-content active" id="tab-tek-kisilik">
+                <div class="gallery-media-grid">
+                    <div class="gallery-media-item large reveal">
+                        <video class="gallery-video" controls preload="metadata" poster="">
+                            <source src="Yurt Tek Kişilik Oda videosu.mp4" type="video/mp4">
+                            Tarayıcınız video oynatmayı desteklemiyor.
+                        </video>
+                        <div class="gallery-media-label"><i class="fas fa-play-circle"></i> Tek Kişilik Oda Turu</div>
+                    </div>
+                    <div class="gallery-media-item reveal">
+                        <img src="yurt banyo.jpeg" alt="Yurt Banyo" class="gallery-image" loading="lazy">
+                        <div class="gallery-media-label"><i class="fas fa-bath"></i> Banyo</div>
                     </div>
                 </div>
-                <div class="gallery-item large reveal">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-building"></i>
-                        <span>Dış Görünüm</span>
+            </div>
+
+            <!-- 2 Kişilik Oda -->
+            <div class="gallery-tab-content" id="tab-iki-kisilik">
+                <div class="gallery-media-grid">
+                    <div class="gallery-media-item large reveal">
+                        <video class="gallery-video" controls preload="metadata" poster="">
+                            <source src="Yurt 2 kişik oda videosu.mp4" type="video/mp4">
+                            Tarayıcınız video oynatmayı desteklemiyor.
+                        </video>
+                        <div class="gallery-media-label"><i class="fas fa-play-circle"></i> İki Kişilik Oda Turu</div>
+                    </div>
+                    <div class="gallery-media-item reveal">
+                        <img src="yurt banyo.jpeg" alt="Yurt Banyo" class="gallery-image" loading="lazy">
+                        <div class="gallery-media-label"><i class="fas fa-bath"></i> Banyo</div>
                     </div>
                 </div>
-                <div class="gallery-item reveal">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-utensils"></i>
-                        <span>Yemekhane</span>
+            </div>
+
+            <!-- Dış Çekim -->
+            <div class="gallery-tab-content" id="tab-dis-cekim">
+                <div class="gallery-media-grid">
+                    <div class="gallery-media-item reveal">
+                        <img src="Yurt dış çekim.jpeg" alt="Yurt Dış Çekim" class="gallery-image" loading="lazy">
+                        <div class="gallery-media-label"><i class="fas fa-building"></i> Yurt Dış Görünüm</div>
+                    </div>
+                    <div class="gallery-media-item reveal">
+                        <img src="dış çekim.jpg" alt="Yurt Dış Çekim" class="gallery-image" loading="lazy">
+                        <div class="gallery-media-label"><i class="fas fa-building"></i> Yurt Dış Görünüm</div>
                     </div>
                 </div>
-                <div class="gallery-item reveal">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-book-open"></i>
-                        <span>Etüt Salonu</span>
+            </div>
+
+            <!-- Ailemiz -->
+            <div class="gallery-tab-content" id="tab-ailemiz">
+                <div class="gallery-empty-state reveal">
+                    <i class="fas fa-camera"></i>
+                    <h3>Fotoğraflar Yakında</h3>
+                    <p>Öğrencilerimiz ve ailemizle birlikte çektiğimiz fotoğraflar yakında burada olacak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SIKÇA SORULAN SORULAR ========== -->
+    <section class="section sss" id="sss">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">S.S.S</span>
+                <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+                <p class="section-desc">Merak ettiğiniz soruların cevaplarını burada bulabilirsiniz.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Sözleşme nasıl yapılıyor?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sözleşme yıllık olarak imzalanır ve ücretinizi maksimum 10 taksitte ödeyebilirsiniz.</p>
                     </div>
                 </div>
-                <div class="gallery-item reveal">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-shirt"></i>
-                        <span>Çamaşırhane</span>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Kesintilere karşı önlemleriniz neler?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Elektrik kesintilerine karşı jeneratörümüz, su kesintilerine karşı su tankımız mevcuttur. Kesintisiz bir yaşam alanı sunuyoruz.</p>
                     </div>
                 </div>
-                <div class="gallery-item large reveal">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-people-group"></i>
-                        <span>Sosyal Alanlar</span>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Çocuğumuzun yanında misafir olarak kalabilir miyiz?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Evet, yurdumuzda misafir kabul ediyoruz. Ailelerin çocuklarını ziyaret etmesine her zaman kapımız açıktır.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Hizmetlerden ekstra ücret alınıyor mu?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Hayır, kesinlikle ekstra ücret alınmaz. Çamaşır yıkama, oda temizliği, kampüse servis, kahvaltı ve yemek dahil tüm hizmetler ücrete dahildir.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Beğendiğimiz odayı tutabiliyor muyuz?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Evet! Kayıt sırasında yurdumuzu oda oda gezersiniz ve beğendiğiniz odayı tutarsınız. Oda yerleşimi tamamen sizin tercihinize göre belirlenir.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Servisler kampüs içerisine giriyor mu?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Evet, servislerimiz kampüsün içine girer. Fakültenize kadar bırakır ve ders çıkışında fakültenizin önünden alırız.</p>
                     </div>
                 </div>
             </div>
@@ -326,8 +427,7 @@
             <div class="aksaray-grid">
                 <div class="aksaray-card reveal">
                     <div class="aksaray-card-img">
-                        <img src="https://images.unsplash.com/photo-1600623047138-dfab29e3d498?w=600&h=350&fit=crop&q=80"
-                            alt="Ihlara Vadisi" loading="lazy">
+                        <img src="ıhlara vadisi.jpg" alt="Ihlara Vadisi" loading="lazy">
                     </div>
                     <div class="aksaray-card-body">
                         <h3>Ihlara Vadisi</h3>
@@ -337,8 +437,7 @@
                 </div>
                 <div class="aksaray-card reveal">
                     <div class="aksaray-card-img">
-                        <img src="https://images.unsplash.com/photo-1566127444979-b3d2b654e3d7?w=600&h=350&fit=crop&q=80"
-                            alt="Aksaray Müzesi" loading="lazy">
+                        <img src="AksarayMüzesi.jpg" alt="Aksaray Müzesi" loading="lazy">
                     </div>
                     <div class="aksaray-card-body">
                         <h3>Aksaray Müzesi</h3>
@@ -348,8 +447,7 @@
                 </div>
                 <div class="aksaray-card reveal">
                     <div class="aksaray-card-img">
-                        <img src="https://images.unsplash.com/photo-1641130663904-d7e1af882d54?w=600&h=350&fit=crop&q=80"
-                            alt="Güzelyurt" loading="lazy">
+                        <img src="güzelyurt.jpeg" alt="Güzelyurt" loading="lazy">
                     </div>
                     <div class="aksaray-card-body">
                         <h3>Güzelyurt</h3>
@@ -358,8 +456,7 @@
                 </div>
                 <div class="aksaray-card reveal">
                     <div class="aksaray-card-img">
-                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&h=350&fit=crop&q=80"
-                            alt="Hasan Dağı" loading="lazy">
+                        <img src="Hasandağı.jpg" alt="Hasan Dağı" loading="lazy">
                     </div>
                     <div class="aksaray-card-body">
                         <h3>Hasan Dağı</h3>
@@ -368,8 +465,7 @@
                 </div>
                 <div class="aksaray-card reveal">
                     <div class="aksaray-card-img">
-                        <img src="https://images.unsplash.com/photo-1590076084640-7c1c16263368?w=600&h=350&fit=crop&q=80"
-                            alt="Ağzıkarahan Kervansarayı" loading="lazy">
+                        <img src="Ağzıkarahan.jpg" alt="Ağzıkarahan Kervansarayı" loading="lazy">
                     </div>
                     <div class="aksaray-card-body">
                         <h3>Ağzıkarahan</h3>
@@ -379,13 +475,21 @@
                 </div>
                 <div class="aksaray-card reveal">
                     <div class="aksaray-card-img">
-                        <img src="https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=600&h=350&fit=crop&q=80"
-                            alt="Tuz Gölü" loading="lazy">
+                        <img src="TuzGölü.jpg" alt="Tuz Gölü" loading="lazy">
                     </div>
                     <div class="aksaray-card-body">
                         <h3>Tuz Gölü</h3>
                         <p>Türkiye'nin ikinci büyük gölü, özellikle yaz aylarında pembe rengiyle büyüleyici manzaralar
                             sunar.</p>
+                    </div>
+                </div>
+                <div class="aksaray-card reveal">
+                    <div class="aksaray-card-img">
+                        <img src="SultanHanı.jpg" alt="Sultan Hanı Kervansarayı" loading="lazy">
+                    </div>
+                    <div class="aksaray-card-body">
+                        <h3>Sultan Hanı</h3>
+                        <p>Anadolu Selçuklu dönemine ait, Türkiye'nin en büyük kervansarayı. Tarihi İpek Yolu'nun en önemli konaklama noktalarından biri.</p>
                     </div>
                 </div>
             </div>
@@ -489,6 +593,7 @@
                         <li><a href="#hakkimizda">Hakkımızda</a></li>
                         <li><a href="#ozellikler">Özellikler</a></li>
                         <li><a href="#galeri">Galeri</a></li>
+                        <li><a href="#sss">S.S.S</a></li>
                         <li><a href="#aksarayimiz">Aksarayımız</a></li>
                         <li><a href="#iletisim">İletişim</a></li>
                     </ul>

@@ -9,13 +9,13 @@ const heroParticles = document.getElementById('hero-particles');
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
-    
+
     if (currentScroll > 60) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -39,13 +39,13 @@ const sections = document.querySelectorAll('section[id]');
 
 function updateActiveNav() {
     const scrollY = window.scrollY + 120;
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
         const correspondingLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-        
+
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
             navLinks.forEach(l => l.classList.remove('active'));
             if (correspondingLink) correspondingLink.classList.add('active');
@@ -90,29 +90,29 @@ statNumbers.forEach(el => counterObserver.observe(el));
 function animateCounter(el, target) {
     const duration = 2000;
     const startTime = performance.now();
-    
+
     function update(currentTime) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        
+
         // Ease out cubic
         const eased = 1 - Math.pow(1 - progress, 3);
         const current = Math.round(eased * target);
-        
+
         el.textContent = current;
-        
+
         if (progress < 1) {
             requestAnimationFrame(update);
         }
     }
-    
+
     requestAnimationFrame(update);
 }
 
 // ===== Hero Particles =====
 function createParticles() {
     if (!heroParticles) return;
-    
+
     for (let i = 0; i < 30; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
@@ -128,9 +128,57 @@ function createParticles() {
 
 createParticles();
 
+// ===== Gallery Tabs =====
+const galleryTabBtns = document.querySelectorAll('.gallery-tab-btn');
+const galleryTabContents = document.querySelectorAll('.gallery-tab-content');
+
+galleryTabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const tabId = btn.getAttribute('data-tab');
+
+        // Update active button
+        galleryTabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update active content
+        galleryTabContents.forEach(content => {
+            content.classList.remove('active');
+        });
+        const activeTab = document.getElementById('tab-' + tabId);
+        if (activeTab) {
+            activeTab.classList.add('active');
+            // Re-trigger reveal animation for new tab content
+            activeTab.querySelectorAll('.reveal').forEach(el => {
+                el.classList.remove('active');
+                setTimeout(() => el.classList.add('active'), 50);
+            });
+        }
+    });
+});
+
+// ===== FAQ Accordion =====
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const isOpen = faqItem.classList.contains('open');
+
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('open');
+        });
+
+        // Open clicked item if it wasn't already open
+        if (!isOpen) {
+            faqItem.classList.add('open');
+        }
+    });
+});
+
 // ===== Smooth scroll for all anchor links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
