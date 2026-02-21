@@ -949,6 +949,10 @@ img {
     font-size: 0.95rem;
 }
 
+.ailemiz-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 /* ===== SSS (FAQ) ===== */
 .sss {
     background: var(--primary-light);
