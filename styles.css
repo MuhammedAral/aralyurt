@@ -98,7 +98,7 @@ img {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(212, 168, 67, 0.45);
+    box-shadow: 0 0 25px rgba(46, 134, 171, 0.6);
 }
 
 .btn-outline {
@@ -643,6 +643,8 @@ img {
 .feature-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius-md);
     padding: 32px 24px;
     text-align: center;
@@ -1353,6 +1355,8 @@ img {
 .aksaray-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius-md);
     padding: 0;
     text-align: center;
