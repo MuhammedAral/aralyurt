@@ -1619,7 +1619,51 @@ img {
     flex-shrink: 0;
 }
 
+/* ----- Bolum zeminleri: sitenin koyu/acik ritmini korur ----- */
+.kyk-page-header,
+.kyk-intro,
+.kyk-dahil {
+    background: var(--primary);
+}
+
+.kyk-compare,
+.kyk-kime {
+    background: var(--primary-light);
+}
+
+.kyk-cta {
+    background: var(--primary);
+}
+
+/* ----- Dikey bosluklar: 6 bolum x 100px cok genisti ----- */
+.kyk-page-header {
+    padding-top: 140px;
+    padding-bottom: 24px;
+}
+
+.kyk-intro {
+    padding-top: 0;
+    padding-bottom: 80px;
+}
+
+.kyk-compare {
+    padding: 70px 0 80px;
+}
+
+.kyk-dahil,
+.kyk-kime {
+    padding: 80px 0;
+}
+
+.kyk-cta {
+    padding: 80px 0 100px;
+}
+
 /* ----- Sayfa basligi ----- */
+.kyk-page-header .section-header {
+    margin-bottom: 0;
+}
+
 .kyk-page-header .section-title {
     font-family: var(--font-heading);
     font-size: clamp(2.2rem, 5vw, 3.2rem);
@@ -1629,10 +1673,6 @@ img {
 }
 
 /* ----- Durust giris blogu ----- */
-.kyk-intro {
-    padding-top: 0;
-}
-
 .kyk-honest {
     max-width: 780px;
     margin: 0 auto;
@@ -1663,17 +1703,14 @@ img {
 }
 
 /* ----- Karsilastirma tablosu ----- */
-.kyk-compare {
-    padding-top: 40px;
-}
-
 .vs-table {
     max-width: 1050px;
     margin: 0 auto;
     border-radius: var(--radius-lg);
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(10, 22, 40, 0.45);
+    box-shadow: var(--shadow-md);
 }
 
 .vs-head,
@@ -1686,7 +1723,7 @@ img {
     position: sticky;
     top: 70px;
     z-index: 5;
-    background: var(--primary-light);
+    background: var(--primary);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
