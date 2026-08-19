@@ -206,8 +206,9 @@ img {
 }
 
 .nav-link {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+    padding: 8px 11px;
+    font-size: 0.85rem;
+    white-space: nowrap;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.75);
     border-radius: 8px;
@@ -332,19 +333,22 @@ img {
 }
 
 .hero-announce {
-    display: inline-flex;
+    display: flex;
+    width: fit-content;
     align-items: center;
-    gap: 12px;
-    padding: 10px 22px;
-    margin-bottom: 18px;
+    justify-content: center;
+    gap: 14px;
+    padding: 14px 32px;
+    margin: 0 auto 22px;
     background: linear-gradient(135deg, rgba(52, 199, 89, 0.18), rgba(52, 199, 89, 0.08));
     border: 1px solid rgba(52, 199, 89, 0.45);
     border-radius: 50px;
     color: var(--white);
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
     letter-spacing: 0.2px;
-    box-shadow: 0 0 28px rgba(52, 199, 89, 0.18);
+    box-shadow: 0 0 34px rgba(52, 199, 89, 0.22);
     animation: fadeInDown 1s ease;
 }
 
@@ -362,8 +366,8 @@ img {
 .announce-pulse {
     position: relative;
     flex-shrink: 0;
-    width: 10px;
-    height: 10px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
     background: var(--success);
 }
@@ -383,7 +387,7 @@ img {
 }
 
 .announce-arrow {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     opacity: 0.75;
     transition: var(--transition);
 }
@@ -397,11 +401,16 @@ img {
     .announce-pulse::after { animation: none; }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .hero-announce {
-        font-size: 0.82rem;
-        padding: 9px 16px;
-        gap: 9px;
+        font-size: 0.95rem;
+        padding: 12px 20px;
+        gap: 10px;
+    }
+
+    .announce-pulse {
+        width: 11px;
+        height: 11px;
     }
 }
 
@@ -1553,8 +1562,8 @@ img {
 .nav-link-hot::before {
     content: '';
     position: absolute;
-    top: 6px;
-    right: 6px;
+    top: 4px;
+    right: 2px;
     width: 7px;
     height: 7px;
     border-radius: 50%;
@@ -2056,6 +2065,18 @@ img {
     .cta-buttons .btn {
         width: 100%;
         justify-content: center;
+    }
+}
+
+/* Dar masaustu: 9 menu ogesi tasmasin */
+@media (min-width: 769px) and (max-width: 1150px) {
+    .nav-menu {
+        gap: 1px;
+    }
+
+    .nav-link {
+        padding: 7px 7px;
+        font-size: 0.79rem;
     }
 }
 
