@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aral Kız & Erkek Yurtları | Aksaray Öğrenci Yurdu</title>
     <meta name="description"
-        content="Aksaray'da Gençlik ve Spor Bakanlığı'na bağlı özel öğrenci yurdu. 25+ yıllık tecrübe, güvenli ortam, ders saatlerine göre ayarlanmış servis, 24 saat internet. Yurdumuz Yuvanız olsun.">
+        content="Aksaray'da Gençlik ve Spor Bakanlığı'na bağlı özel öğrenci yurdu. 26 yıllık tecrübe, güvenli ortam, ders saatlerine göre ayarlanmış servis, 24 saat internet. Yurdumuz Yuvanız olsun.">
     <meta name="keywords"
         content="aksaray yurt, öğrenci yurdu, aral yurt, aksaray özel yurt, aksaray üniversitesi yurt, aksaray gezilecek yerler">
     <meta name="author" content="Aral Kız & Erkek Yurtları">
     <meta property="og:title" content="Aral Kız & Erkek Yurtları | Aksaray">
     <meta property="og:description"
-        content="Aksaray'da Gençlik ve Spor Bakanlığı'na bağlı özel öğrenci yurdu. 25+ yıllık tecrübe ile hizmetinizdeyiz.">
+        content="Aksaray'da Gençlik ve Spor Bakanlığı'na bağlı özel öğrenci yurdu. 26 yıllık tecrübe ile hizmetinizdeyiz.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aralyurt.com">
     <meta property="og:image" content="https://aralyurt.com/images/dis-cekim.jpg">
@@ -21,8 +21,11 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://aralyurt.com/images/dis-cekim.jpg">
     <link rel="canonical" href="https://aralyurt.com">
-    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
-    <link rel="apple-touch-icon" href="images/logo.jpg">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,11 +42,6 @@
 
 <body>
 
-    <!-- Section View Back Button -->
-    <button class="section-back-btn" id="section-back-btn">
-        <i class="fas fa-arrow-left"></i> Tüm Sayfa
-    </button>
-
     <!-- ========== NAVBAR ========== -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -57,10 +55,10 @@
                 <li><a href="#hero" class="nav-link active">Ana Sayfa</a></li>
                 <li><a href="#hakkimizda" class="nav-link">Hakkımızda</a></li>
                 <li><a href="#ozellikler" class="nav-link">Özellikler</a></li>
+                <li><a href="kyk-mi-aral-mi.html" class="nav-link nav-link-hot">KYK mı, Aral mı?</a></li>
                 <li><a href="galeri.html" class="nav-link">Galeri</a></li>
                 <li><a href="videolar.html" class="nav-link">Videolar</a></li>
-                <li><a href="#sss" class="nav-link">S.S.S</a></li>
-                <li><a href="#aksarayimiz" class="nav-link">Aksarayımız</a></li>
+                <li><a href="sss.html" class="nav-link">S.S.S</a></li>
                 <li><a href="#iletisim" class="nav-link">İletişim</a></li>
             </ul>
             <div class="nav-cta">
@@ -81,6 +79,12 @@
         <div class="hero-bg-overlay"></div>
         <div class="hero-particles" id="hero-particles"></div>
         <div class="hero-content">
+            <!-- Sezonluk Kayıt Duyurusu: tarih aralığı script.js icindeki KAYIT_SEZONU ayarindan gelir -->
+            <a href="#iletisim" class="hero-announce" id="hero-announce" hidden>
+                <span class="announce-pulse"></span>
+                <span class="announce-text"><strong id="announce-season">2026-2027</strong> Kayıtlarımız Başladı</span>
+                <i class="fas fa-arrow-right announce-arrow"></i>
+            </a>
             <div class="hero-badge">
                 <i class="fas fa-award"></i>
                 <span>GSB Onaylı • 2000'den Beri Hizmetinizde</span>
@@ -103,7 +107,7 @@
             </div>
             <div class="hero-stats">
                 <div class="stat-item">
-                    <span class="stat-number" data-target="25">0</span>
+                    <span class="stat-number" data-target="26">0</span>
                     <span class="stat-suffix">+</span>
                     <span class="stat-label">Yıllık Tecrübe</span>
                 </div>
@@ -139,7 +143,7 @@
                         <p>
                             Aral Öğrenci Yurtları, <strong>Gençlik ve Spor Bakanlığı'na bağlı özel yurt</strong> olarak
                             2000 yılından bu yana
-                            Aksaray'da hizmet vermektedir. 25 yıllık tecrübemizle, kalitemizi her geçen yıl artırarak
+                            Aksaray'da hizmet vermektedir. 26 yıllık tecrübemizle, kalitemizi her geçen yıl artırarak
                             öğrencilerimize <strong>aile sıcaklığında</strong> bir ortam sunuyoruz.
                         </p>
                         <p>
@@ -269,6 +273,23 @@
         </div>
     </section>
 
+
+    <!-- ========== KYK KARSILASTIRMA SERIDI ========== -->
+    <section class="kyk-strip">
+        <div class="container">
+            <div class="kyk-strip-inner reveal">
+                <div class="kyk-strip-text">
+                    <span class="kyk-strip-tag">Tercih dönemi</span>
+                    <h3>KYK mı, Aral mı?</h3>
+                    <p>İkisini dürüstçe karşılaştırdık — yerleşme kesinliği, oda, ulaşım ve fiyat.</p>
+                </div>
+                <a href="kyk-mi-aral-mi.html" class="btn btn-primary kyk-strip-btn">
+                    Karşılaştırmayı Gör <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- ========== KAMPÜSE ULAŞIM ========== -->
     <section class="section ulasim" id="ulasim">
         <div class="container">
@@ -309,174 +330,6 @@
         </div>
     </section>
 
-    <!-- ========== SIKÇA SORULAN SORULAR ========== -->
-    <section class="section sss" id="sss">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">S.S.S</span>
-                <h2 class="section-title">Sıkça Sorulan Sorular</h2>
-                <p class="section-desc">Merak ettiğiniz soruların cevaplarını burada bulabilirsiniz.</p>
-            </div>
-            <div class="faq-container">
-                <div class="faq-item reveal">
-                    <button class="faq-question">
-                        <span>Sözleşme nasıl yapılıyor?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sözleşme yıllık olarak imzalanır ve ücretinizi maksimum 10 taksitte ödeyebilirsiniz.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <button class="faq-question">
-                        <span>Kesintilere karşı önlemleriniz neler?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Elektrik kesintilerine karşı jeneratörümüz, su kesintilerine karşı su tankımız mevcuttur.
-                            Kesintisiz bir yaşam alanı sunuyoruz.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <button class="faq-question">
-                        <span>Çocuğumuzun yanında misafir olarak kalabilir miyiz?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Evet, yurdumuzda misafir kabul ediyoruz. Ailelerin çocuklarını ziyaret etmesine her zaman
-                            kapımız açıktır.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <button class="faq-question">
-                        <span>Hizmetlerden ekstra ücret alınıyor mu?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Hayır, kesinlikle ekstra ücret alınmaz. Çamaşır yıkama, oda temizliği, kampüse servis,
-                            kahvaltı ve yemek dahil tüm hizmetler ücrete dahildir.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <button class="faq-question">
-                        <span>Beğendiğimiz odayı tutabiliyor muyuz?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Evet! Kayıt sırasında yurdumuzu oda oda gezersiniz ve beğendiğiniz odayı tutarsınız. Oda
-                            yerleşimi tamamen sizin tercihinize göre belirlenir.</p>
-                    </div>
-                </div>
-                <div class="faq-item reveal">
-                    <button class="faq-question">
-                        <span>Servisler kampüs içerisine giriyor mu?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Evet, servislerimiz kampüsün içine girer. Fakültenize kadar bırakır ve ders çıkışında
-                            fakültenizin önünden alırız.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== AKSARAYIMIZ ========== -->
-    <section class="section aksarayimiz" id="aksarayimiz">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Aksarayımız</span>
-                <h2 class="section-title">Aksaray'ı Keşfedin</h2>
-                <p class="section-desc">Tarihi ve doğal güzellikleriyle Aksaray, keşfedilmeyi bekleyen eşsiz bir şehir.
-                </p>
-            </div>
-            <p class="aksaray-intro">
-                Kapadokya'nın batı kapısı olan Aksaray, binlerce yıllık tarihi, muhteşem doğası ve sıcakkanlı
-                insanlarıyla unutulmaz bir deneyim sunar. Öğrencilerimiz sadece eğitim değil, aynı zamanda bu eşsiz
-                şehri de keşfetme fırsatı buluyor.
-            </p>
-            <div class="aksaray-grid">
-                <div class="aksaray-card reveal">
-                    <div class="aksaray-card-img">
-                        <img src="images/ihlara-vadisi.jpg" alt="Ihlara Vadisi" loading="lazy">
-                    </div>
-                    <div class="aksaray-card-body">
-                        <h3>Ihlara Vadisi</h3>
-                        <p>14 km uzunluğundaki kanyon, yüzlerce kaya kilisesi ve eşsiz doğasıyla dünyanın en önemli
-                            vadilerinden biri.</p>
-                    </div>
-                </div>
-                <div class="aksaray-card reveal">
-                    <div class="aksaray-card-img">
-                        <img src="images/aksaray-muzesi.jpg" alt="Aksaray Müzesi" loading="lazy">
-                    </div>
-                    <div class="aksaray-card-body">
-                        <h3>Aksaray Müzesi</h3>
-                        <p>Hitit, Roma, Bizans ve Selçuklu dönemlerine ait eserlerle Anadolu tarihinin zengin
-                            koleksiyonu.</p>
-                    </div>
-                </div>
-                <div class="aksaray-card reveal">
-                    <div class="aksaray-card-img">
-                        <img src="images/guzelyurt.jpeg" alt="Güzelyurt" loading="lazy">
-                    </div>
-                    <div class="aksaray-card-body">
-                        <h3>Güzelyurt</h3>
-                        <p>Kaya kiliseleri, yer altı şehirleri ve tarihi taş evleriyle büyüleyici bir ilçe.</p>
-                    </div>
-                </div>
-                <div class="aksaray-card reveal">
-                    <div class="aksaray-card-img">
-                        <img src="images/hasandagi.jpg" alt="Hasan Dağı" loading="lazy">
-                    </div>
-                    <div class="aksaray-card-body">
-                        <h3>Hasan Dağı</h3>
-                        <p>3.268 metre yüksekliğindeki sönmüş volkan, trekking ve doğa yürüyüşleri için ideal.</p>
-                    </div>
-                </div>
-                <div class="aksaray-card reveal">
-                    <div class="aksaray-card-img">
-                        <img src="images/agzikarahan.jpg" alt="Ağzıkarahan Kervansarayı" loading="lazy">
-                    </div>
-                    <div class="aksaray-card-body">
-                        <h3>Ağzıkarahan</h3>
-                        <p>13. yüzyıldan kalma muhteşem Selçuklu kervansarayı, taş işçiliğinin en güzel örneklerinden.
-                        </p>
-                    </div>
-                </div>
-                <div class="aksaray-card reveal">
-                    <div class="aksaray-card-img">
-                        <img src="images/tuzgolu.jpg" alt="Tuz Gölü" loading="lazy">
-                    </div>
-                    <div class="aksaray-card-body">
-                        <h3>Tuz Gölü</h3>
-                        <p>Türkiye'nin ikinci büyük gölü, özellikle yaz aylarında pembe rengiyle büyüleyici manzaralar
-                            sunar.</p>
-                    </div>
-                </div>
-                <div class="aksaray-card reveal">
-                    <div class="aksaray-card-img">
-                        <img src="images/sultanhani.jpg" alt="Sultan Hanı Kervansarayı" loading="lazy">
-                    </div>
-                    <div class="aksaray-card-body">
-                        <h3>Sultan Hanı</h3>
-                        <p>Anadolu Selçuklu dönemine ait, Türkiye'nin en büyük kervansarayı. Tarihi İpek Yolu'nun en
-                            önemli konaklama noktalarından biri.</p>
-                    </div>
-                </div>
-                <div class="aksaray-card reveal">
-                    <div class="aksaray-card-img">
-                        <img src="images/manastir-vadisi.jpg" alt="Manastır Vadisi" loading="lazy">
-                    </div>
-                    <div class="aksaray-card-body">
-                        <h3>Manastır Vadisi</h3>
-                        <p>Güzelyurt ilçesinde yer alan vadi, yüzlerce yıllık kaya kiliseleri ve manastırlarıyla tarihe
-                            tanıklık eder. Doğa ve tarih iç içe.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ========== İLETİŞİM ========== -->
     <section class="section iletisim" id="iletisim">
@@ -574,11 +427,12 @@
                         <li><a href="#hero">Ana Sayfa</a></li>
                         <li><a href="#hakkimizda">Hakkımızda</a></li>
                         <li><a href="#ozellikler">Özellikler</a></li>
+                        <li><a href="kyk-mi-aral-mi.html">KYK mı, Aral mı?</a></li>
                         <li><a href="galeri.html">Galeri</a></li>
                         <li><a href="videolar.html">Videolar</a></li>
-                        <li><a href="#sss">S.S.S</a></li>
-                        <li><a href="#aksarayimiz">Aksarayımız</a></li>
+                        <li><a href="sss.html">S.S.S</a></li>
                         <li><a href="#iletisim">İletişim</a></li>
+                        <li><a href="aksarayimiz.html">Aksarayımız</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -595,7 +449,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Aral Kız & Erkek Yurtları. Tüm hakları saklıdır.</p>
+                <p>&copy; <span id="footer-year">2026</span> Aral Kız & Erkek Yurtları. Tüm hakları saklıdır.</p>
             </div>
         </div>
     </footer>
@@ -607,7 +461,7 @@
     </a>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/905427319515" target="_blank" rel="noopener" class="whatsapp-btn"
+    <a href="https://wa.me/905427319515?text=Merhaba%2C%202026-2027%20d%C3%B6nemi%20i%C3%A7in%20bo%C5%9F%20oda%20ve%20kay%C4%B1t%20bilgisi%20almak%20istiyorum." target="_blank" rel="noopener" class="whatsapp-btn"
         aria-label="WhatsApp ile iletişim">
         <i class="fab fa-whatsapp"></i>
     </a>

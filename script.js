@@ -176,64 +176,51 @@ faqQuestions.forEach(question => {
     });
 });
 
-// ===== Section View Mode =====
-const sectionViewTargets = ['galeri', 'sss', 'aksarayimiz'];
-const backBtn = document.getElementById('section-back-btn');
-
-function exitSectionView() {
-    document.body.classList.remove('section-view');
-    document.querySelectorAll('.section-view-target').forEach(s => {
-        s.classList.remove('section-view-target');
-    });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function enterSectionView(sectionId) {
-    // Exit any previous section view
-    document.querySelectorAll('.section-view-target').forEach(s => {
-        s.classList.remove('section-view-target');
-    });
-
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-        document.body.classList.add('section-view');
-        targetSection.classList.add('section-view-target');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-
-        // Re-trigger reveal animations
-        targetSection.querySelectorAll('.reveal').forEach(el => {
-            el.classList.remove('active');
-            setTimeout(() => el.classList.add('active'), 100);
-        });
-    }
-}
-
-if (backBtn) {
-    backBtn.addEventListener('click', exitSectionView);
-}
-
 // ===== Smooth scroll for all anchor links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
         const href = this.getAttribute('href');
-        const sectionId = href.substring(1);
-
-        if (sectionViewTargets.includes(sectionId)) {
-            // Enter section view for galeri, sss, aksarayimiz
-            enterSectionView(sectionId);
-        } else {
-            // Exit section view if active, then scroll
-            if (document.body.classList.contains('section-view')) {
-                exitSectionView();
-                setTimeout(() => {
-                    const target = document.querySelector(href);
-                    if (target) target.scrollIntoView({ behavior: 'smooth' });
-                }, 100);
-            } else {
-                const target = document.querySelector(href);
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+        if (href === '#') return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+// ===== Footer Yılı (her yıl kendi kendine güncellenir) =====
+document.querySelectorAll('#footer-year').forEach(el => {
+    el.textContent = new Date().getFullYear();
+});
+
+// ===== Sezonluk Kayıt Duyurusu =====
+// Duyuru sadece bu tarih araligindayken gorunur, disinda otomatik gizlenir.
+// Tarihleri degistirmek icin sadece asagidaki 4 sayiyi duzenlemeniz yeterli.
+const KAYIT_SEZONU = {
+    baslangicAy: 6,   // Haziran
+    baslangicGun: 15,
+    bitisAy: 11,      // Kasim
+    bitisGun: 15
+};
+
+(function initKayitDuyurusu() {
+    const banner = document.getElementById('hero-announce');
+    if (!banner) return;
+
+    const now = new Date();
+    const yil = now.getFullYear();
+    const bugun = new Date(yil, now.getMonth(), now.getDate());
+    const basla = new Date(yil, KAYIT_SEZONU.baslangicAy - 1, KAYIT_SEZONU.baslangicGun);
+    const bit = new Date(yil, KAYIT_SEZONU.bitisAy - 1, KAYIT_SEZONU.bitisGun);
+
+    if (bugun < basla || bugun > bit) return; // sezon disi -> gizli kal
+
+    // Sezon etiketi: Haziran'dan sonra 2026-2027, oncesinde 2025-2026 gibi
+    const seasonEl = document.getElementById('announce-season');
+    if (seasonEl) {
+        const baslangicYili = now.getMonth() + 1 >= KAYIT_SEZONU.baslangicAy ? yil : yil - 1;
+        seasonEl.textContent = `${baslangicYili}-${baslangicYili + 1}`;
+    }
+
+    banner.hidden = false;
+})();
