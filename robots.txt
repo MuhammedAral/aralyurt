@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aralyurt.com/sitemap.xml
