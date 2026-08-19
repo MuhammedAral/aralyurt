@@ -1729,23 +1729,25 @@ img {
 }
 
 .vs-head {
-    position: sticky;
-    top: 70px;
-    z-index: 5;
     background: var(--primary);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.14);
 }
 
-.vs-head .vs-cell {
-    padding: 16px 24px;
+.vs-head .vs-cell,
+.vs-head .vs-topic {
+    padding: 18px 24px;
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1rem;
     color: var(--white);
 }
 
-.vs-head-aral {
-    background: linear-gradient(135deg, rgba(46, 134, 171, 0.35), rgba(46, 134, 171, 0.15));
+.vs-head .vs-head-kyk {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.vs-head .vs-head-aral {
+    background: linear-gradient(135deg, rgba(46, 134, 171, 0.45), rgba(46, 134, 171, 0.22));
     color: var(--white);
 }
 
@@ -1754,9 +1756,16 @@ img {
     margin-right: 6px;
 }
 
-.vs-row + .vs-row,
-.vs-head + .vs-row {
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
+.vs-row + .vs-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Sutunlari birbirinden ayir */
+.vs-row .vs-cell + .vs-cell,
+.vs-head .vs-cell + .vs-cell,
+.vs-row .vs-topic + .vs-cell,
+.vs-head .vs-topic + .vs-cell {
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .vs-topic {
@@ -2003,6 +2012,13 @@ img {
         font-size: 1rem;
         background: rgba(255, 255, 255, 0.06);
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Kart gorunumunde sutun ayiricisi degil, satir ayiricisi olsun */
+    .vs-row .vs-cell + .vs-cell,
+    .vs-row .vs-topic + .vs-cell {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     .vs-cell {
