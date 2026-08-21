@@ -128,34 +128,6 @@ function createParticles() {
 
 createParticles();
 
-// ===== Gallery Tabs =====
-const galleryTabBtns = document.querySelectorAll('.gallery-tab-btn');
-const galleryTabContents = document.querySelectorAll('.gallery-tab-content');
-
-galleryTabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const tabId = btn.getAttribute('data-tab');
-
-        // Update active button
-        galleryTabBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        // Update active content
-        galleryTabContents.forEach(content => {
-            content.classList.remove('active');
-        });
-        const activeTab = document.getElementById('tab-' + tabId);
-        if (activeTab) {
-            activeTab.classList.add('active');
-            // Re-trigger reveal animation for new tab content
-            activeTab.querySelectorAll('.reveal').forEach(el => {
-                el.classList.remove('active');
-                setTimeout(() => el.classList.add('active'), 50);
-            });
-        }
-    });
-});
-
 // ===== FAQ Accordion =====
 const faqQuestions = document.querySelectorAll('.faq-question');
 
